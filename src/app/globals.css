@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f6ff;
+  --surface: #ffffff;
+  --foreground: #1b1b2f;
+  --muted: #5c5f7b;
+  --stroke: #d7d3f0;
+  --accent: #4f46e5;
+  --accent-strong: #4338ca;
+  --container-max: 1280px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-stroke: var(--stroke);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(59, 130, 246, 0.18) 0%, transparent 35%),
+    radial-gradient(circle at 92% 4%, rgba(236, 72, 153, 0.2) 0%, transparent 32%),
+    radial-gradient(circle at 60% 85%, rgba(139, 92, 246, 0.18) 0%, transparent 38%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Avenir Next", "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: #f5b7d3;
+  color: #2a1034;
+}
+
+.content-container {
+  width: min(100% - 3rem, var(--container-max));
+  margin-inline: auto;
+}
+
+.section-gap {
+  padding-block: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-gap {
+    padding-block: 7.5rem;
+  }
+}
+
+.ladder-rail {
+  position: relative;
+}
+
+.ladder-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: clamp(1rem, 10vw, 7rem);
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #c9c6ee 12%, #c9c6ee 88%, transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .ladder-rail::before {
+    display: none;
+  }
+}
+
+.logo-marquee {
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
