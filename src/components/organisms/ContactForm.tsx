@@ -185,10 +185,10 @@ export function ContactForm() {
 
             {/* Submit Button */}
             <div className="flex flex-col items-center gap-4 pt-4 sm:flex-row sm:justify-center">
-              <Button
+              <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full sm:w-auto min-w-[200px] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex min-h-11 w-full sm:w-auto min-w-[200px] items-center justify-center rounded-full bg-accent px-6 text-sm font-semibold text-white transition-all duration-300 ease-in-out hover:bg-accent-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center gap-2">
@@ -198,7 +198,7 @@ export function ContactForm() {
                 ) : (
                   "Get Free Quote"
                 )}
-              </Button>
+              </button>
               
               <p className="text-xs text-muted text-center sm:text-left">
                 We'll contact you within 24 hours
