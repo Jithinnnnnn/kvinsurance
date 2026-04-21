@@ -8,7 +8,7 @@ import { fadeInUp, smoothTransition, viewport } from "@/lib/motion";
 
 export function HeroSection() {
   return (
-    <section className="bg-ivory/70 pt-2 pb-6 md:pt-4 md:pb-8">
+    <section className="bg-ivory/70 pt-3 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-12">
       <div className="content-container">
         <motion.div
           variants={fadeInUp}
@@ -20,13 +20,13 @@ export function HeroSection() {
         >
           <div className="flex flex-col justify-center px-6 py-10 text-left md:px-12 md:py-14">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-slate-700">
-              Your Safety, Our Family Promise.
+            K Vaidyan Solutions              
             </p>
             <DisplayTitle className="max-w-xl text-slate-900" id="hero-heading">
-              Protect what matters — as soon as today
+              Protecting You and Your Family
             </DisplayTitle>
             <BodyText className="mt-4 max-w-xl text-slate-700">
-              Protect the people you love with modern insurance guidance, fast digital service, and clear, trustworthy pricing.
+              Financial services are essential for any business or individual seeking to manage their finances effectively. One of the key aspects of financial services is finding a reliable company that can provide the required services. K-Vaidyan Solutions in Thevalakkara, Kollam is a reputable financial service company that offers high-quality financial services to clients in Thevalakkara, Kollam.
             </BodyText>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="#quote" ariaLabel="Get started with a quote">

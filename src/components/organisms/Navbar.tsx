@@ -20,7 +20,7 @@ export function Navbar() {
   const toggleMenu = () => setIsMenuOpen((current) => !current);
 
   return (
-    <header className="fixed inset-x-0 top-4 z-[100] flex justify-center px-4">
+    <header className="fixed inset-x-0 top-6 z-[100] flex justify-center px-4 md:top-4">
       <div className="flex w-full max-w-[1280px] flex-col items-center">
         <motion.div
           animate={{ 
@@ -29,11 +29,11 @@ export function Navbar() {
             paddingRight: isElevated ? "1.5rem" : "1rem"
           }}
           transition={{ duration: 0.4, ease: "circOut" }}
-          className="flex min-h-[64px] w-full items-center justify-between rounded-full border border-white/40 bg-white/70 shadow-lg backdrop-blur-md md:min-h-[72px]"
+          className="flex min-h-[60px] w-full items-center justify-between rounded-full border border-white/40 bg-white/70 shadow-lg backdrop-blur-md sm:min-h-[64px] md:min-h-[72px]"
         >
           {/* BRANDING: Logo + Name properly aligned like reference */}
-          <a href="/" className="flex min-w-0 items-center gap-3 transition-transform active:scale-95">
-            <div className="relative h-8 w-8 md:h-10 md:w-10">
+          <a href="/" className="flex min-w-0 items-center gap-2 transition-transform active:scale-95 sm:gap-3">
+            <div className="relative h-7 w-7 flex-shrink-0 sm:h-8 sm:w-8 md:h-10 md:w-10">
               <Image 
                 src="/logo.svg" 
                 alt="K-Vaidyan Logo" 
@@ -42,8 +42,8 @@ export function Navbar() {
                 priority
               />
             </div>
-            <span className="max-w-[140px] overflow-hidden text-ellipsis whitespace-nowrap text-lg font-bold tracking-tight text-slate-900 sm:max-w-[220px] md:max-w-none md:text-xl">
-              K Vaidyan Insurance 
+            <span className="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-base font-bold tracking-tight text-slate-900 sm:text-lg md:text-xl">
+              K Vaidyan Solutions 
             </span>
           </a>
 
@@ -64,7 +64,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleMenu}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-100/50 text-slate-900 md:hidden"
+            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-slate-100/50 text-slate-900 sm:h-11 sm:w-11 md:hidden"
           >
             <HamburgerIcon isOpen={isMenuOpen} />
           </button>

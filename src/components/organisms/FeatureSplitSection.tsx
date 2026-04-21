@@ -8,8 +8,21 @@ import { fadeInUp, smoothTransition, viewport } from "@/lib/motion";
 
 export function FeatureSplitSection() {
   return (
-    <section className="content-container py-16 md:py-24 lg:py-32">
-      <div className="space-y-16 md:space-y-24 lg:space-y-32">
+    <section className="content-container pt-0 pb-12 md:pb-16 lg:pb-20">
+      {/* Section Header */}
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        transition={smoothTransition}
+        className="text-center mb-10 md:mb-14 lg:mb-18"
+      >
+        <SectionTitle className="text-foreground">Our Core Services</SectionTitle>
+        
+      </motion.div>
+
+      <div className="space-y-12 md:space-y-16 lg:space-y-20">
         {featureSplits.map((item, index) => {
           const reverse = index % 2 === 1;
           return (

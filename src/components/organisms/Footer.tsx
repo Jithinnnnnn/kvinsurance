@@ -9,7 +9,7 @@ export function Footer() {
   const instagramUrl = "https://www.instagram.com/kvaidyans?igsh=MXA2anB0dWQ1ZGxvdw==";
 
   return (
-    <footer id="quote" className="border-t border-indigo-100 bg-[#f8f9ff] pt-16 pb-8">
+    <footer id="quote" className="border-t border-indigo-100 bg-[#f8f9ff] pt-14 pb-6 md:pt-18 md:pb-8 lg:pt-22 lg:pb-10">
       <div className="content-container">
         {/* Main Grid: Stacks on Mobile, 3 columns on Desktop */}
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr] lg:gap-20">

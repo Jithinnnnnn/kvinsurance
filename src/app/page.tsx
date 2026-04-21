@@ -1,5 +1,6 @@
 import { Footer } from "@/components/organisms/Footer";
 import { Navbar } from "@/components/organisms/Navbar";
+import { FloatingChatbot } from "@/components/organisms/FloatingChatbot";
 import { FaqBlock } from "@/sections/FaqBlock";
 import { FeaturesBlock } from "@/sections/FeaturesBlock";
 import { HeroBlock } from "@/sections/HeroBlock";
@@ -18,6 +19,7 @@ export default function Home() {
         <FaqBlock />
       </main>
       <Footer />
+      <FloatingChatbot />
     </div>
   );
 }

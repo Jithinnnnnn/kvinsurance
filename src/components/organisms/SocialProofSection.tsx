@@ -5,8 +5,8 @@ import { keyPartners } from "@/core/services/content.service";
 
 export function SocialProofSection() {
   return (
-    <section className="content-container py-12 md:py-16 lg:py-20">
-      <div className="text-center mb-12 md:mb-16">
+    <section className="content-container pt-0 pb-6 md:pb-10 lg:pb-14">
+      <div className="text-center mb-8 md:mb-12">
         <h2 className="text-2xl font-bold text-foreground mb-4 md:text-3xl lg:text-4xl">
           Our Trusted Insurance Partners
         </h2>

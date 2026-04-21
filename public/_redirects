@@ -1,0 +1,14 @@
+# Netlify redirects file
+# Handle client-side routing for SPA
+
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# API redirects (if you add API routes later)
+/api/*  /.netlify/functions/:splat  200
+
+# Contact form submission
+/contact  /  200
+
+# Legacy redirects (add as needed)
+# /old-page  /new-page  301
