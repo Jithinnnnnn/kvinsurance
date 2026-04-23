@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "K-Vaidyan Insurance Solutions | Your Safety, Our Family Promise",
   description:
     "K-Vaidyan Insurance Solutions delivers modern coverage guidance with a secure, family-first promise and responsive digital service.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
