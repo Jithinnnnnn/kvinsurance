@@ -57,6 +57,7 @@ body {
   position: relative;
 }
 
+/* Commented out the ladder-rail line
 .ladder-rail::before {
   content: "";
   position: absolute;
@@ -73,6 +74,7 @@ body {
     display: none;
   }
 }
+*/
 
 .logo-marquee {
   animation: marquee 24s linear infinite;

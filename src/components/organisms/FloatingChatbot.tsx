@@ -15,47 +15,72 @@ interface ChatResponse {
   response: string;
 }
 
-// Predefined insurance FAQ responses
+// Predefined insurance FAQ responses with hardcoded questions and answers
 const chatResponses: ChatResponse[] = [
+  // Greetings
   {
-    keywords: ["hello", "hi", "hey", "start"],
-    response: "Hello! I'm here to help you with your insurance needs. You can ask me about motor insurance, health insurance, home insurance, or get a quote!"
+    keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "good day", "morning", "afternoon", "evening"],
+    response: "Good morning! How are you? I'm here to help you with your insurance needs. You can ask me about motor insurance, health insurance, home insurance, or get a quote!"
   },
+  
+  // Motor Insurance
   {
-    keywords: ["motor", "car", "vehicle", "auto", "bike", "motorcycle"],
-    response: "Our motor insurance covers both two-wheelers and four-wheelers with comprehensive and third-party liability coverage. We offer zero-depreciation add-ons and 24/7 roadside assistance. Would you like to know more about specific coverage?"
+    keywords: ["motor", "car", "vehicle", "auto", "bike", "motorcycle", "two wheeler", "four wheeler"],
+    response: "🚗 Motor Insurance Coverage:\n\n• Comprehensive coverage for cars & bikes\n• Third-party liability protection\n• Zero depreciation add-on available\n• 24/7 roadside assistance\n• Quick claim settlement\n\nPremium starts from ₹2,500/year. Would you like a personalized quote?"
   },
+  
+  // Health Insurance
   {
-    keywords: ["health", "medical", "hospital", "doctor"],
-    response: "Our health insurance provides financial protection for medical emergencies, covering hospitalization, pre/post-operative care, and critical illness for individuals and families. We have plans starting from ₹5,000 per year."
+    keywords: ["health", "medical", "hospital", "doctor", "illness", "surgery"],
+    response: "🏥 Health Insurance Benefits:\n\n• Cashless hospitalization\n• Pre & post-operative care\n• Critical illness coverage\n• Family floater options\n• No claim bonus\n\nPlans start from ₹5,000/year for individuals. Interested in family coverage?"
   },
+  
+  // Home Insurance
   {
-    keywords: ["home", "house", "property", "fire", "theft"],
-    response: "Home insurance protects your residential property against fire, burglary, and natural calamities. We cover both structure and valuable contents. Coverage starts from ₹3,000 annually for a standard home."
+    keywords: ["home", "house", "property", "fire", "theft", "burglary"],
+    response: "🏠 Home Insurance Protection:\n\n• Fire & natural calamity coverage\n• Theft & burglary protection\n• Structure & contents coverage\n• Temporary accommodation\n• Public liability\n\nCoverage starts from ₹3,000/year. Need a home assessment?"
   },
+  
+  // Travel Insurance
   {
-    keywords: ["travel", "trip", "vacation", "abroad"],
-    response: "Our travel insurance provides global coverage including medical emergencies abroad, trip delays, and baggage loss. Plans start from ₹500 for domestic travel and ₹1,500 for international trips."
+    keywords: ["travel", "trip", "vacation", "abroad", "international", "domestic"],
+    response: "✈️ Travel Insurance Coverage:\n\n• Medical emergencies abroad\n• Trip cancellation/delay\n• Baggage loss protection\n• Passport loss assistance\n• 24/7 global support\n\nDomestic: ₹500/trip | International: ₹1,500/trip"
   },
+  
+  // Life Insurance
   {
-    keywords: ["life", "term", "endowment", "family"],
-    response: "We offer both term and endowment life insurance plans designed for long-term financial security. Term plans start from ₹500/month for ₹50 lakh coverage. Would you like a personalized quote?"
+    keywords: ["life", "term", "endowment", "family", "death", "maturity"],
+    response: "👨‍👩‍👧‍👦 Life Insurance Plans:\n\n• Term life insurance\n• Endowment policies\n• Money-back plans\n• Child education plans\n• Pension plans\n\nTerm plans from ₹500/month for ₹50 lakh cover. Planning for your family's future?"
   },
+  
+  // Pricing & Quotes
   {
-    keywords: ["quote", "price", "cost", "premium", "rate"],
-    response: "I'd be happy to help you get a quote! Please share your contact details using our contact form above, or call us at +91 8111923644. Our experts will provide you with the best rates within 24 hours."
+    keywords: ["quote", "price", "cost", "premium", "rate", "how much", "charges"],
+    response: "💰 Get Your Personalized Quote:\n\n📞 Call: +91 8111923644\n📧 Email: kvaidyans2023@gmail.com\n📝 Fill our contact form above\n\nOur experts will provide the best rates within 24 hours. Free consultation available!"
   },
+  
+  // Contact Information
   {
-    keywords: ["contact", "phone", "call", "office", "address"],
-    response: "You can reach us at:\n📞 +91 8111923644\n📧 kvaidyans2023@gmail.com\n📍 Chenankkara Junction, Thevalakkara, Kerala 690524\n\nOur office hours are 9 AM to 6 PM, Monday to Saturday."
+    keywords: ["contact", "phone", "call", "office", "address", "location", "visit"],
+    response: "📞 Contact K Vaidyan Insurance:\n\n☎️ Phone: +91 8111923644\n📧 Email: kvaidyans2023@gmail.com\n📍 Address: Chenankkara Junction, Thevalakkara, Kerala 690524\n\n🕒 Office Hours: 9 AM - 6 PM (Mon-Sat)\n\nFree consultation available!"
   },
+  
+  // Claims Process
   {
-    keywords: ["claim", "accident", "damage", "repair"],
-    response: "For claims, please call our 24/7 helpline at +91 8111923644. You can also email us at kvaidyans2023@gmail.com with your policy number and incident details. We ensure quick claim processing within 7-15 days."
+    keywords: ["claim", "accident", "damage", "repair", "settlement", "cashless"],
+    response: "🛡️ Easy Claim Process:\n\n1️⃣ Call 24/7 helpline: +91 8111923644\n2️⃣ Submit required documents\n3️⃣ Our team will assist you\n4️⃣ Quick settlement (7-15 days)\n\n📧 Email: kvaidyans2023@gmail.com with policy number"
   },
+  
+  // Services
   {
-    keywords: ["thank", "thanks", "bye", "goodbye"],
-    response: "You're welcome! Feel free to reach out anytime for your insurance needs. Have a great day! 😊"
+    keywords: ["services", "what do you offer", "products", "insurance types"],
+    response: "🏢 Our Insurance Services:\n\n🚗 Motor Insurance\n🏥 Health Insurance\n🏠 Home Insurance\n✈️ Travel Insurance\n👨‍👩‍👧‍👦 Life Insurance\n🐄 Cattle & Dairy Farm\n🏪 Shopkeeper's Insurance\n🚢 Marine Insurance\n\nWhich service interests you?"
+  },
+  
+  // Thanks & Goodbye
+  {
+    keywords: ["thank", "thanks", "bye", "goodbye", "see you", "later"],
+    response: "You're most welcome! 😊\n\nFeel free to reach out anytime:\n📞 +91 8111923644\n📧 kvaidyans2023@gmail.com\n\nHave a great day and stay protected! 🛡️"
   }
 ];
 
@@ -114,7 +139,7 @@ export function FloatingChatbot() {
       }
     }
     
-    return "I'd be happy to help! For specific questions about our insurance products, please call us at +91 8111923644 or fill out our contact form above. Our experts will assist you personally.";
+    return "I'd be happy to help! Here are some things you can ask me about:\n\n🚗 Motor Insurance\n🏥 Health Insurance\n🏠 Home Insurance\n✈️ Travel Insurance\n👨‍👩‍👧‍👦 Life Insurance\n💰 Get Quote\n📞 Contact Info\n\nOr call us directly at +91 8111923644 for personalized assistance!";
   };
 
   const handleSendMessage = async () => {
